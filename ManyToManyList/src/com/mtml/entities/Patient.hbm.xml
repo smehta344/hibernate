@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 29, 2019 12:01:05 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.mtml.entities">
+	<class name="Patient" table="patient">
+		<id name="patientNo" column="patient_no">
+			<generator class="increment" />
+		</id>
+		<property name="patientName" column="patient_name" />
+		<property name="age" />
+		<property name="gender" />
+		<property name="mobileNo" column="mobile_no" />
+		<property name="emailAddress" column="email_address" />
+		<list name="medicalChecks" table="pacient_medical_checks">
+			<key column="patient_no" />
+			<list-index column="medical_test_no" base="1"/>
+			<many-to-many column="medical_checkup_no"
+				class="MedicalCheckup" />
+		</list>
+	</class>
+</hibernate-mapping>
