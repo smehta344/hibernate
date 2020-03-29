@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 15, 2018 10:39:53 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.csr.entites">
+	<class name="Staff" table="staff">
+		<id name="staffNo" column="staff_no" />
+		<property name="staffFirstName" column="staff_first_name" />
+		<property name="staffLastName" column="staff_last_name" />
+		<property name="gender" />
+		<property name="age" />
+		<property name="designation" />
+		<property name="experience" />
+	</class>
+</hibernate-mapping>
