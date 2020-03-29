@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 21, 2019 4:27:36 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.oto.entities">
+	<class name="Warranty" table="warranty">
+		<id name="productNo" column="product_no">
+			<generator class="foreign">
+				<param name="property">product</param>
+			</generator>
+		</id>
+		<property name="purchaseDate" column="purchase_date" />
+		<property name="warrantyYears" column="warranty_years" />
+		<many-to-one name="product" class="Product" unique="true" />
+	</class>
+</hibernate-mapping>
