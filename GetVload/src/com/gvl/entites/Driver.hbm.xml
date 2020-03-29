@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 26, 2018 1:19:01 AM by Hibernate Tools 3.5.0.Final -->
+
+<hibernate-mapping package="com.gvl.entites" >
+	<class name="Driver" table="driver" proxy="IDriver">
+		<id name="driverNo" type="int">
+			<column name="driver_no" />
+		</id>
+		<property name="driverName" type="string">
+			<column name="driver_name" />
+		</property>
+		<property name="gender" type="string">
+			<column name="gender" />
+		</property>
+		<property name="age" type="int">
+			<column name="age" />
+		</property>
+		<property name="mobileNo" type="long">
+			<column name="mobile_no" />
+		</property>
+		<property name="exprience" type="float">
+			<column name="exprience" />
+		</property>
+		<property name="salary" type="double">
+			<column name="salary" />
+		</property>
+	</class>
+</hibernate-mapping>
