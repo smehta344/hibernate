@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 3, 2019 11:44:36 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.inverse.entities">
+	<class name="Policy" table="policy">
+		<id name="policyNo" column="policy_no">
+			<generator class="increment" />
+		</id>
+		<property name="planName" column="plan_name" />
+		<property name="policyType" column="policy_type" />
+		<property name="policyIssuedDate" column="policy_issued_date" />
+		<property name="insuredYears" column="insured_years" />
+		<property name="sumInsured" column="sum_insured" />
+		<many-to-one name="member" column="member_no"
+			class="Policy" />
+	</class>
+</hibernate-mapping>
