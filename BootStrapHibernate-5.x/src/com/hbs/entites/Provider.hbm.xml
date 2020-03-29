@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.hbs.entites">
+	<class name="Provider" table="provider">
+		<id name="providerNo" column="provider_no" />
+		<property name="providerName" column="provider_Name" />
+		<property name="establishDate" column="establish_date"></property>
+		<property name="contactNumber" column="contact_number" />
+		<property name="emailAddress" column="email_address" />
+	</class>
+</hibernate-mapping>
