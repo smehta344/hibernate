@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 29, 2019 12:35:31 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.mtmm.entities">
+	<class name="Game" table="game">
+		<id name="gameNo" column="game_no">
+			<generator class="increment" />
+		</id>
+		<property name="seriesName" column="series_name" />
+		<property name="description" />
+		<property name="location" />
+		<map name="players" table="game_players">
+			<key column="game_no" />
+			<map-key column="world_ranking_no" type="int" length="30"/>
+			<many-to-many column="player_no" class="Player" />
+		</map>
+	</class>
+</hibernate-mapping>
