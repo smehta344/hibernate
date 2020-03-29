@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 9, 2019 5:17:01 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otoasotm.entities">
+
+	<class name="Address" table="address">
+		<id name="addressNo" column="address_no">
+			<generator class="increment" />
+		</id>
+
+		<property name="addressLine1" column="address_line1" />
+		<property name="addressLine2" column="address_line2" />
+		<property name="city" />
+		<property name="state" />
+		<property name="zip" />
+		<property name="country" />
+	</class>
+</hibernate-mapping>

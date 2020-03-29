@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 9, 2019 5:17:01 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otoasotm.entities">
+	<class name="Customer" table="customer">
+		<id name="customerNo">
+			<column name="customer_no" />
+			<generator class="increment" />
+		</id>
+
+		<property name="customerName">
+			<column name="customer_name" />
+		</property>
+		<property name="dob" />
+		<property name="gender" />
+		<property name="mobileNo">
+			<column name="mobile_no" />
+		</property>
+		<property name="emailAddress">
+			<column name="email_address" />
+		</property>
+		
+		<many-to-one name="address" class="Address"
+			column="address" />
+	</class>
+</hibernate-mapping>
