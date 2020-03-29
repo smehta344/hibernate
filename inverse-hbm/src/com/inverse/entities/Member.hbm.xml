@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 3, 2019 11:44:36 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.inverse.entities">
+	<class name="Member" table="member">
+		<id name="memberNo" column="member_no">
+			<generator class="increment" />
+		</id>
+		<property name="memberName" column="member_name" />
+		<property name="age" />
+		<property name="gender" />
+		<property name="mobileNo" column="mobile_no" />
+		<property name="emailAddress" column="email_address" />
+		<set name="policies" inverse="true">
+			<key column="member_no" />
+			<one-to-many class="Member" />
+		</set>
+	</class>
+</hibernate-mapping>
