@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 28, 2018 12:47:04 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.flc.entites.Schedule" table="schedule">
+		<id name="stationNo" type="int">
+			<column name="station_no" />
+		</id>
+		<property name="source" type="string">
+			<column name="source" />
+		</property>
+		<property name="destination" type="string">
+			<column name="destination" />
+		</property>
+		<property name="departureDate" type="date">
+			<column name="departure_date" />
+		</property>
+		<property name="arrivalTime" type="date">
+			<column name="arrival_time" />
+		</property>
+	</class>
+</hibernate-mapping>
