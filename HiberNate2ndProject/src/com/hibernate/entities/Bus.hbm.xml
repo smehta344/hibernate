@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 Dec, 2018 11:55:26 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.hibernate.entities">
+	<class name="Bus" table="bus">
+		<id name="busNo" type="int">
+			<column name="bus_no" sql-type="int" length="15"
+				not-null="true" unique="true" />
+		</id>
+		<property name="serviceNo" type="java.lang.String">
+			<column name="service_no" />
+		</property>
+		<property name="busType" type="java.lang.String">
+			<column name="bus_type" />
+		</property>
+		<property name="seatingCapacity" type="int">
+			<column name="seating_capacity" />
+		</property>
+		<property name="fuleType" type="string">
+			<column name="fule_type" />
+		</property>
+		<property name="price" type="double">
+		</property>
+	</class>
+</hibernate-mapping>
