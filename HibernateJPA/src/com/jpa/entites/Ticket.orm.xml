@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings
+	xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm    
+   http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+	version="1.0">
+
+	<entity class="com.jpa.entites.Ticket">
+		<table name="ticket" />
+		<attributes>
+			<id name="ticketNo">
+				<column name="ticket_no" />
+			</id>
+			<basic name="source" />
+			<basic name="destination" />
+			<basic name="journeyDate">
+				<column name="journey_date" />
+			</basic>
+			<basic name="passenger_name">
+				<column name="passenger_name" />
+			</basic>
+			<basic name="age" />
+			<basic name="gender" />
+			<basic name="amount" />
+		</attributes>
+	</entity>
+</entity-mappings>
