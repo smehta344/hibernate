@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 12, 2018 4:48:51 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.legacy.entites">
+	<class name="Journey" table="journey">
+		<id name="journeyNo" column="journey_no" />
+		<property name="source" />
+		<property name="destination" />
+		<property name="journeyDate" column="journey_date" />
+		<property name="estimatedHours" column="estimated_hours" />
+		<property name="distanceInKm" column="distance_in_km" />
+		<property name="price" />
+	</class>
+</hibernate-mapping>
