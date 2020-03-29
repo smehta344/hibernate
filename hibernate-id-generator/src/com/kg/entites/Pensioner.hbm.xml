@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 29, 2018 11:15:30 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.kg.entites">
+	<class name="Pensioner" table="pensioner">
+		<id name="pensionerNo" type="int">
+			<column name="pensioner_no" />
+			<generator class="increment" >
+			<!-- <param name="max_lo">5</param> -->
+			</generator>
+		</id>
+		<property name="firstName" type="string">
+			<column name="first_name" />
+		</property>
+		<property name="lastName" type="string">
+			<column name="last_name" />
+		</property>
+		<property name="dob" type="date">
+			<column name="dob" />
+		</property>
+		<property name="gender" type="string">
+			<column name="gender" />
+		</property>
+		<property name="mobileNumber" type="long">
+			<column name="mobile_number" />
+		</property>
+		<property name="emailAddress" type="string">
+			<column name="email_address" />
+		</property>
+		<property name="addressLine1" type="string">
+			<column name="address_line1" />
+		</property>
+		<property name="addressLine2" type="string">
+			<column name="address_line2" />
+		</property>
+		<property name="state" type="string">
+			<column name="state" />
+		</property>
+		<property name="zip" type="int">
+			<column name="zip" />
+		</property>
+		<property name="country" type="string">
+			<column name="country" />
+		</property>
+	</class>
+</hibernate-mapping>
