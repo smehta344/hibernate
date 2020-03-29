@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 3, 2019 5:11:46 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.cpid.entites">
+	<class name="WorkLog" table="work_log">
+		<composite-id name="pk">
+			<key-property name="jobSheetNo" column="job_sheet_no" />
+			<key-property name="staffNo" column="staff_no" />
+		</composite-id>
+		<property name="description"/>
+		<property name="comments"/>
+	</class>
+</hibernate-mapping>
